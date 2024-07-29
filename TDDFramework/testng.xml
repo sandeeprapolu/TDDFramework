@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite parallel="false" name="Suite">
+  <test name="Test">
+  <parameter name="platformName" value="Android"/>
+  <parameter name="udid" value="emulator-5554"/>
+  <parameter name="deviceName" value="emulator-5554"/>
+  <parameter name="avd" value="Pixel_6_Pro"/>
+    <classes>
+      <class name="com.qa.tests.LoginTests"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
