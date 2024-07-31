@@ -1,13 +1,19 @@
 package com.qa.pages;
 
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.PageFactory;
 
 import com.qa.BaseTest;
 
 import io.appium.java_client.AppiumBy;
 import io.appium.java_client.pagefactory.AndroidFindBy;
+import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 
 public class LoginPage extends BaseTest {
+	
+	public LoginPage() { 
+		PageFactory.initElements(new AppiumFieldDecorator(driver), this); 
+		}
 
 	@AndroidFindBy (accessibility = "test-Username") private WebElement userNameTxtField;
 	@AndroidFindBy (accessibility = "test-Password") private WebElement passwordTxtField;

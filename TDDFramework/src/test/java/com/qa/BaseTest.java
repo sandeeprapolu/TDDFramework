@@ -23,13 +23,13 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterTest;
 
 public class BaseTest {
-	protected AppiumDriver driver;
+	protected static AppiumDriver driver;
 	protected Properties props;
 	InputStream inputStream;
 	
 	
 	public BaseTest() {
-		PageFactory.initElements(new AppiumFieldDecorator(driver), this);
+		
 	}
 	
 	@Parameters({"platformName","udid","deviceName","avd"})
